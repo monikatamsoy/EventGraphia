@@ -1,8 +1,39 @@
 body {
     overflow-y: hidden;
+    background-image: url(../images/p5.jpg);
+    background-size: cover;
 }
 
 #lighBox {
     max-height: 100vh;
     overflow-y: scroll;
+}
+
+.polaroid {
+    padding-bottom: 5rem;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+}
+
+.polaroid:hover {
+    transform: scale(0.85);
+    box-shadow: 0 8px 50px black!important;
+}
+
+.fullImg {
+    height: 100%!important;
+    width: 100%!important;
+    position: relative;
+}
+
+.button-custom {
+    background: #B8DBD9;
+    color: rgba(0,0,0,0.6);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.button-custom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px black;
 }

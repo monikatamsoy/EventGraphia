@@ -11,15 +11,20 @@
   <body>
     <div ng-app="app" id="lighBox">
       <div ng-controller="imageGrid">
-        <div class="uk-child-width-1-4@m uk-child-width-1-1" uk-scrollspy="cls: uk-animation-fade; target: > div; delay: 75" uk-grid uk-lightbox="animation: scale; delay-controls: 1000">
+        <div class="uk-child-width-1-4@m uk-animation-slide-top-medium uk-padding uk-child-width-1-1" uk-grid uk-lightbox="animation: scale; delay-controls: 1000">
           <div ng-repeat="m in imageArr">
-            <a class="uk-inline" data-caption="Image {{m}}" href="http://via.placeholder.com/2000x2000?text={{m}}" data-type="image">
-              <img src="http://via.placeholder.com/200x200?text={{m}}">
-            </a>
+            <div class="uk-card-body uk-card-hover polaroid uk-padding-small uk-text-center uk-card uk-card-default">
+              <a class="uk-inline fullImg" data-caption="Image {{m}}" href="http://via.placeholder.com/2000x2000?text={{m}}" data-type="image">
+                <img class="fullImg" src="http://via.placeholder.com/200x200?text={{m}}">
+              </a>
+            </div>
           </div>
         </div>
         <div class="uk-margin uk-text-center">
-          <button class="uk-button uk-button-default" ng-click="loadMore()">Load More</button>
+          <button class="uk-button button-custom" hidden id="loadMore" ng-click="loadMore()">Load More</button>
+        </div>
+        <div class="uk-margin uk-text-center">
+          <div uk-spinner="ratio: 2"></div>
         </div>
       </div>
     </div>
