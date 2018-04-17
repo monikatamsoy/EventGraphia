@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/uikit.min.css" />
+
+  </head>
+  <body ng-app="app">
+    <div class="uk-child-width-1-4@m uk-child-width-1-1" ng-controller="imageGrid" uk-grid>
+      <div ng-repeat="m in imageArr" ng-click="bigImage()">
+        <img src="http://via.placeholder.com/200x200?text={{m}}">
+      </div>
+    </div>
+
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/uikit.min.js"></script>
+    <script src="/js/uikit-icons.min.js"></script>
+  </body>
+</html>
