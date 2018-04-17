@@ -2,19 +2,30 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="/css/uikit.min.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
 
   </head>
-  <body ng-app="app">
-    <div class="uk-child-width-1-4@m uk-child-width-1-1" ng-controller="imageGrid" uk-grid>
-      <div ng-repeat="m in imageArr" ng-click="bigImage()">
-        <img src="http://via.placeholder.com/200x200?text={{m}}">
+  <body>
+    <div ng-app="app" id="lighBox">
+      <div ng-controller="imageGrid">
+        <div class="uk-child-width-1-4@m uk-child-width-1-1" uk-scrollspy="cls: uk-animation-fade; target: > div; delay: 75" uk-grid uk-lightbox="animation: scale; delay-controls: 1000">
+          <div ng-repeat="m in imageArr">
+            <a class="uk-inline" data-caption="Image {{m}}" href="http://via.placeholder.com/2000x2000?text={{m}}" data-type="image">
+              <img src="http://via.placeholder.com/200x200?text={{m}}">
+            </a>
+          </div>
+        </div>
+        <div class="uk-margin uk-text-center">
+          <button class="uk-button uk-button-default" ng-click="loadMore()">Load More</button>
+        </div>
       </div>
     </div>
-
-    <script src="/js/angular.min.js"></script>
-    <script src="/js/uikit.min.js"></script>
-    <script src="/js/uikit-icons.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>

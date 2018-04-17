@@ -1,0 +1,8 @@
+body {
+    overflow-y: hidden;
+}
+
+#lighBox {
+    max-height: 100vh;
+    overflow-y: scroll;
+}
