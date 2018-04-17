@@ -19,6 +19,6 @@ var lightBox = document.getElementById("lighBox")
 
 lighBox.onscroll = function(ev) {
     if ((lighBox.clientHeight + lighBox.scrollTop) >= lighBox.scrollHeight) {
-        // document.getElementById("loadMore").click()
+        document.getElementById("loadMore").click()
     }
 };
